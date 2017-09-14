@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>NotUsingFrameworkWebApp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/jsp/404.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/jsp/500.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/jsp/error.jsp</location>
+  </error-page>
+  <servlet>
+    <servlet-name>SampleController</servlet-name>
+    <servlet-class>domain.controller.SampleController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SampleResultController</servlet-name>
+    <servlet-class>domain.controller.SampleResultController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SampleController</servlet-name>
+    <url-pattern>/Sample</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SampleResultController</servlet-name>
+    <url-pattern>/SampleResult</url-pattern>
+  </servlet-mapping>
+</web-app>
